@@ -1,7 +1,7 @@
 <?php
-  require_once $_SERVER['DOCUMENT_ROOT'].'/Rotonda-de-Comida/model/interfaces/InterfaceClient.php';
-  require_once $_SERVER['DOCUMENT_ROOT'].'/Rotonda-de-Comida/model/dataSource/Connection.php';
-  require_once $_SERVER['DOCUMENT_ROOT'].'/Rotonda-de-Comida/model/transferObject/Client.php';
+  require_once $_SERVER['DOCUMENT_ROOT'].'/Simulador-Bancario/model/interfaces/InterfaceClient.php';
+  require_once $_SERVER['DOCUMENT_ROOT'].'/Simulador-Bancario/model/dataSource/Connection.php';
+  require_once $_SERVER['DOCUMENT_ROOT'].'/Simulador-Bancario/model/transferObject/Client.php';
   /**
    *
    */
@@ -28,32 +28,7 @@
 
     
 
-    public function getPasswordByNumberPhone($numberPhone)
-    {
-      $dataBase = new ConnectionDB();
-      $sql = 'SELECT password FROM Clientes WHERE celular = :celular';
-      $result = $dataBase -> executeQuery($sql, array(':celular'=>$numberPhone));
-      $password = null;
-      if($result != false){
-          $password = $result[0]['password'];
-      }
-      return $password;
-    }
-    public function getClientByIdentification($identification='')
-    {
-      $dataBase = new ConnectionDB();
-      $sql = 'SELECT * FROM Clientes WHERE cedula = :cedula';
-      $result = $dataBase->executeQuery($sql, array(':cedula'=>$identification));
-      $client = null;
-      if($result != false){
-        $client = new Client();
-        $client -> setCedula($result[0]['cedula']);
-        $client -> setName($result[0]['Nombre']);
-        $client -> setCellPhone($result[0]['celular']);
-        // $client -> setDirection();
-      }
-      return $client;
-    }
+    
     
   }
 

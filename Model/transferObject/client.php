@@ -5,50 +5,76 @@
   class Client
   {
 
-    private $name;
-    private $cedula;
-    private $cellPhone;
-    private $direction;
+    private $iduser;
+    private $nombre;
+    private $email;
+    private $telefono;
+    private $password;
+    private $saldo;
 
-    function __construct($name=null, $cedula=null, $cellPhone=null, $direction=null)
+    function __construct($iduser=null, $nombre=null, $email=null, $telefono=null, $password=null, $saldo=null)
     {
-      $this->name=$name;
-      $this->cedula=$cedula;
-      $this->cellPhone=$cellPhone;
-      $this->direction=$direction;
+      $this->iduser=$iduser;
+      $this->nombre=$nombre;
+      $this->email=$email;
+      $this->telefono=$telefono;
+      $this->password=$password;
+      $this->saldo=$saldo;
     }
 
-    public function getName()
+    public function getIdUser()
     {
-      return $this->name;
+      return $this->iduser;
     }
-    public function setName($name)
+
+    public function setIdUser($iduser)
     {
-      $this->name=$name;
+      $this->name=$iduser;
     }
-    public function getCedula()
+
+    public function getNombre()
     {
-      return $this->cedula;
+      return $this->nombre;
     }
-    public function setCedula($cedula)
+    public function setNombre($nombre)
     {
-      $this->cedula=$cedula;
+      $this->cedula=$nombre;
     }
-    public function getCellPhone()
+    
+    public function getEmail()
     {
-      return $this->cellPhone;
+      return $this->email;
     }
-    public function setCellPhone($cellPhone)
+    public function setEmail($email)
     {
-      $this->cellPhone=$cellPhone;
+      $this->cellPhone=$email;
     }
-    public function getDirection()
+    public function getTelefono()
     {
-      return $this->direction;
+      return $this->telefono;
     }
-    public function setDirection($direction)
+    public function setTelefono($telefono)
     {
-      $this->direction=$direction;
+      $this->telefono=$telefono;
+    }
+
+
+    public function getPassword()
+    {
+      return $this->password;
+    }
+    public function setPassword($password)
+    {
+      $this->password=$password;
+    }
+
+    public function getSaldo()
+    {
+      return $this->saldo;
+    }
+    public function setSaldo($saldo)
+    {
+      $this->saldo=$saldo;
     }
   }
 

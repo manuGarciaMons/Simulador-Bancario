@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <h1 id="title-header">Roundabout restaurant</h1>
+      <h1 id="title-header">Simulador Bancario</h1>
       <nav>
         <ul>
           <li><a href="sign_up.php">sign up</a></li>
@@ -20,11 +20,11 @@
     <?php endif; ?>
     <form class="form" action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> method="post">
       <div class="input-form">
-        <label for="">cellphone</label>
+        <label for="">Usuario</label>
         <input type="text" name="cellphone" value="">
       </div>
       <div class="input-form">
-        <label for="">password</label>
+        <label for="">Password</label>
         <input type="password" name="password" value="">
       </div>
       <div class="input-form">
